@@ -54,8 +54,6 @@ def divide_planilha(arquivo_entrada, quantidade_divisoes):
         return
 
     # Solicita a quantidade de divisões desejada
-    print(quantidade_divisoes)
-
     # Carrega a planilha Excel usando o pandas
     planilha = pd.read_excel(arquivo_entrada)
 
@@ -92,7 +90,8 @@ def divide_planilha(arquivo_entrada, quantidade_divisoes):
         nome_arquivo_saida = f"{pasta_saida}/divisao_{i + 1}.xlsx"
         wb.save(nome_arquivo_saida)
 
-    messagebox.showinfo('Finalizado!',f"A planilha foi dividida em {quantidade_divisoes} partes e salva na pasta '{pasta_saida}'.")
+    messagebox.showinfo('Finalizado!',
+                        f"A planilha foi dividida em {quantidade_divisoes} partes e salva na pasta '{pasta_saida}'.")
     print(f"A planilha foi dividida em {quantidade_divisoes} partes e salva na pasta '{pasta_saida}'.")
 
 
